@@ -27,12 +27,12 @@ public class LeadController {
         this.leadService = leadService;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<LeadResponse> createLead(@RequestBody LeadRequest request) {
         return ResponseEntity.ok(leadService.createLead(request));
     }
 
-    @GetMapping
+    @GetMapping("getAllLeads")
     public ResponseEntity<List<LeadResponse>> getAllLeads() {
         return ResponseEntity.ok(leadService.getAllLeads());
     }

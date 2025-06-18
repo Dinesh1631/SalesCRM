@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "63bf03df-c4ea-41e7-b0d8-322dc6855ae1",
+		"name": "Spring Boot API Collection",
+		"description": "Auto-generated from Spring Boot controllers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41549245"
+	},
+	"item": [
+		{
+			"name": "CallManagement",
+			"item": [
+				{
+					"name": "POST /api/call",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/call",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"call"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "leadManagement",
+			"item": [
+				{
+					"name": "POST /api/leads",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwMTAyODg1LCJleHAiOjE3NTAxODkyODV9.dv4NqJF-IQqLbjFe8RtLpqJyHDhIoWnsdvGMfFD1RnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"sample_text\",\n  \"email\": \"sample_text\",\n  \"phone\": \"sample_text\",\n  \"status\": \"sample_text\",\n  \"assignedTo\": \"sample_text\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8079/api/leads/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"api",
+								"leads",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\": 123,\n  \"name\": \"sample_text\",\n  \"email\": \"sample_text\",\n  \"phone\": \"sample_text\",\n  \"status\": \"sample_text\",\n  \"assignedTo\": \"sample_text\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET getAllLeads",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lQGV4YW1wbGUuY29tIiwiaWF0IjoxNzUwMTAyODg1LCJleHAiOjE3NTAxODkyODV9.dv4NqJF-IQqLbjFe8RtLpqJyHDhIoWnsdvGMfFD1RnM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8079/api/leads/getAllLeads",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"api",
+								"leads",
+								"getAllLeads"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "PUT /{id}/assign",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/{id}/assign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"{id}",
+								"assign"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\": 123,\n  \"name\": \"sample_text\",\n  \"email\": \"sample_text\",\n  \"phone\": \"sample_text\",\n  \"status\": \"sample_text\",\n  \"assignedTo\": \"sample_text\"\n}"
+						}
+					]
+				},
+				{
+					"name": "PUT /{id}/status",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/{id}/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"{id}",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"id\": 123,\n  \"name\": \"sample_text\",\n  \"email\": \"sample_text\",\n  \"phone\": \"sample_text\",\n  \"status\": \"sample_text\",\n  \"assignedTo\": \"sample_text\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "NotificationService",
+			"item": [
+				{
+					"name": "POST /api/notifications",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"to\": \"sample_text\",\n  \"leadName\": \"sample_text\",\n  \"assignedBy\": \"sample_text\",\n  \"assigneeName\": \"sample_text\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/notifications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"notifications"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "UserManagement",
+			"item": [
+				{
+					"name": "POST /api/auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Anil V\",\n  \"email\": \"Anil@gmail.com\",\n  \"password\": \"Anil@123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8079/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				},
+				{
+					"name": "POST /login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"Anil@gmail.com\",\n  \"password\": \"Anil@123\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8079/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8079",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Sample Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [],
+							"cookie": [],
+							"body": "{\n  \"token\": \"sample_text\",\n  \"refreshToken\": \"sample_text\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
